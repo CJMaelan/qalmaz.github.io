@@ -12,7 +12,9 @@
     <p>Om talet är jämnt delbart med båda dina tal visas 'Bish-Bosh'</p>
     
     <div>
-    <input type ="range" id="volume" name="amount" min="0" max="10">
+    <input type ="range" id="volume" name="amount" value="5" min="0" max="10" oninput="this.nextElementSibling.value = this.value">
+    <output>5</output>
+    <label for="volume">valueAsNumber</label>
     </div>
 </body>
 
