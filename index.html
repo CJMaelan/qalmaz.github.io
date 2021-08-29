@@ -1,56 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
     <head>
         <link rel="stylesheet" href="stylesheet.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>qalmaz.github.io</title>
     </head>
-<body>
-    <script src="bishbosh.js">
-    </script>
 
-    <h1>Bish-Bosh 2.0 </h1>
+<body class="background">
+    
+    <h1>Bish-Bosh 2.0 av Carl-Johan Maelan</h1>
     <br>
     <p> Bish-Bosh listar tal mellan 1 och det du väljer nedan.</p>
     <p>Om talet är jämnt delbart med ditt valda bish-tal visas 'Bish' istället för talet</p>
     <p>Om talet är jämnt delbart med ditt valda bosh-tal visas 'Bosh' istället för talet</p>
     <p>Om talet är jämnt delbart med båda dina tal visas 'Bish-Bosh'</p>
+    <br>
     
     <div>
     <label for="volume">Antal nummer:</label>
-    <input type ="range" id="volume" name="amount" value="5" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
-    <output>5</output>
-
-    <br>
-
-    <label for="bish">Bish nummer:</label>
-    <input type ="range" id="bish" name="amount" value="5" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
-    <output>5</output>
-
-    <br>
-
-    <label for="bosh">Bosh nummer:</label>
-    <input type ="range" id="bosh" name="amount" value="5" min="1" max="10" oninput="this.nextElementSibling.value = this.value" oninput="testIfEven(value)">
-    
+    <input type ="range" id="volume" value="5" min="1" max="50" oninput="this.nextElementSibling.value = this.value; bishBoshCalculator();">  
     <output>5</output>
     </div>
 
-    
-    <table>
-        <colgroup>
-        <col span="5">
-        </colgroup>
+    <br>
 
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-        
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
+    <div>
+    <label for="bish">Bish nummer:</label>
+    <input type ="range" id="bish" value="5" min="1" max="10" oninput="this.nextElementSibling.value = this.value; bishBoshCalculator();">
+    <output>5</output>
+    </div>
 
-    </table>
+    <br>
+
+    <div>
+    <label for="bosh">Bosh nummer:</label>
+    <input type ="range" id="bosh" value="5" min="1" max="10" oninput="this.nextElementSibling.value = this.value; bishBoshCalculator();">
+    <output>5</output>
+    </div>
+
+    <ul id="bbUl"></ul>
+    <script src="bishbosh.js">
+    </script>
 </body>
 
 </html>
